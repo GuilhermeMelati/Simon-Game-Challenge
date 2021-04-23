@@ -60,7 +60,9 @@ function ErrorClick() {
         $("body").css({"background": "#011F3F"})
     }, 500);
     score = []
-    $("#level-title").text("Game Over, pres any key to try again!")
+    $("#level-title").text("Game Over, Try Again!")
+    $(".recovery").text("Try Again!")
+    PlaySound("wrong")
 }
 
 function PlaySound(name) {
