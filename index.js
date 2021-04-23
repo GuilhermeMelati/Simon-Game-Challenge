@@ -24,8 +24,6 @@ $("div[type='button']").click((event) => {
           $("#" + event.target.id).removeClass("pressed")
         }, 200)
 
-        PlaySound(event.target.id)
-
         if (score[clicks - 1] === event.target.id && clicks === score.length) {
             clicks = 0
             setTimeout(() => {
@@ -35,6 +33,8 @@ $("div[type='button']").click((event) => {
         else if (score[clicks - 1] != event.target.id) {
             ErrorClick()
         }
+
+        PlaySound(event.target.id)
     }
     catch (e) {
         alert("You must need press any key to start :(")
